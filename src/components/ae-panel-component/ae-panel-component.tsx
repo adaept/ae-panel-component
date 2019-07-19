@@ -1,5 +1,5 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, h, State, Method } from '@stencil/core';
+//import { format } from '../../utils/utils';
 
 @Component({
   tag: 'ae-panel-component',
@@ -7,26 +7,24 @@ import { format } from '../../utils/utils';
   shadow: true
 })
 export class AePanelComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
+  @Prop() aetitle: string;
+  @State() collapsed: boolean;
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+  @Method()
+  toggle() {
+    this.collapsed = !this.collapsed;
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return (
+      <div>
+        <div id="header" onClick={this.toggle.bind(this)}>
+          <span>{this.aetitle}</span>
+        </div>
+        <div id="content" hidden={this.collapsed}>
+          <slot />
+        </div>
+      </div>
+    );
   }
 }

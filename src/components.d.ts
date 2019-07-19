@@ -10,18 +10,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface AePanelComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+    'aetitle': string;
+    'toggle': () => Promise<void>;
   }
 }
 
@@ -40,18 +30,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface AePanelComponent extends JSXBase.HTMLAttributes<HTMLAePanelComponentElement> {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+    'aetitle'?: string;
   }
 
   interface IntrinsicElements {
