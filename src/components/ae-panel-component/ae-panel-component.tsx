@@ -2,11 +2,11 @@ import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'ae-panel-component',
+  styleUrl: 'ae-panel-component.css',
   shadow: true
 })
-export class MyComponent {
+export class AePanelComponent {
   /**
    * The first name
    */
