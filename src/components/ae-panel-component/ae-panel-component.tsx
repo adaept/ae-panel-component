@@ -11,7 +11,7 @@ export class AePanelComponent {
   @State() collapsed: boolean;
 
   @Method()
-  toggle() {
+  async toggle() {
     this.collapsed = !this.collapsed;
   }
 
