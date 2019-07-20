@@ -10,7 +10,13 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface AePanelComponent {
+    /**
+    * Title for the panel
+    */
     'aetitle': string;
+    /**
+    * Show/Hide the panel
+    */
     'toggle': () => Promise<void>;
   }
 }
@@ -30,6 +36,9 @@ declare global {
 
 declare namespace LocalJSX {
   interface AePanelComponent extends JSXBase.HTMLAttributes<HTMLAePanelComponentElement> {
+    /**
+    * Title for the panel
+    */
     'aetitle'?: string;
   }
 
