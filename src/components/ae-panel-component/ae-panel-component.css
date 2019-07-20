@@ -1,9 +1,17 @@
+/*
 ae-panel-component {
   display: block;
   border: black dashed 1px;
 }
+*/
 
-#header {
+:host {
+  box-sizing: border-box;
+  border-color: blueviolet
+
+}
+
+#aeheader {
   background: darkgreen;
   color: white;
   cursor: pointer;

@@ -18,7 +18,7 @@ export class AePanelComponent {
   render() {
     return (
       <div>
-        <div id="header" onClick={this.toggle.bind(this)}>
+        <div id="aeheader" onClick={this.toggle.bind(this)}>
           <span>{this.aetitle}</span>
         </div>
         <div id="content" hidden={this.collapsed}>
