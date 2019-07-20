@@ -1,19 +1,13 @@
-/*
-ae-panel-component {
-  display: block;
-  border: black dashed 1px;
-}
-*/
-
-:host {
-  box-sizing: border-box;
-  border-color: blueviolet
-
-}
-
 #aeheader {
   background: darkgreen;
   color: white;
   cursor: pointer;
   padding: 2px;
+}
+
+#aecontent {
+  background: antiquewhite;
+  border-style: groove;
+  border-color: coral;
+  border-width: 7px;
 }

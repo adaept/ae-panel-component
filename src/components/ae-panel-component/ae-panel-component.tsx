@@ -21,7 +21,7 @@ export class AePanelComponent {
         <div id="aeheader" onClick={this.toggle.bind(this)}>
           <span>{this.aetitle}</span>
         </div>
-        <div id="content" hidden={this.collapsed}>
+        <div id="aecontent" hidden={this.collapsed}>
           <slot />
         </div>
       </div>
