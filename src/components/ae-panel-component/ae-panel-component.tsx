@@ -1,5 +1,4 @@
 import { Component, Prop, h, State, Method } from '@stencil/core';
-//import { format } from '../../utils/utils';
 
 @Component({
   tag: 'ae-panel-component',
@@ -7,9 +6,19 @@ import { Component, Prop, h, State, Method } from '@stencil/core';
   shadow: true
 })
 export class AePanelComponent {
+  /**
+   * Title for the panel
+   */
   @Prop() aetitle: string;
+
+  /**
+   * State of the panel - visible or hidden
+   */
   @State() collapsed: boolean;
 
+  /**
+   * Show/Hide the panel
+   */
   @Method()
   async toggle() {
     this.collapsed = !this.collapsed;
